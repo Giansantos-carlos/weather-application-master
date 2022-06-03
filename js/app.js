@@ -24,13 +24,10 @@ const showCityWeatherInfo = async cityName => {
     cityTemperatureContanier.textContent = Temperature.Metric.Value
 }
 
-cityForm.addEventListener('submit', async event => {
+cityForm.addEventListener('submit', event => {
     event.preventDefault()
-
+    
     const inputValue = event.target.city.value 
-    const [{ Key, LocalizedName }] =  await getCityData(inputValue)
-    const [{ WeatherText, Temperature, IsDayTime, WeatherIcon }] =  await getCityWeather(Key)
-    const timeIcon = `<img src="./src/icons/${WeatherIcon}.svg" />`
 
     showCityCard()
     showCityWeatherInfo(inputValue)
