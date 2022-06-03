@@ -21,5 +21,5 @@ const fetchData =  async URL => {
 }
 
 const getCityData = cityName => fetchData(getCityURL(cityName))
-const getCityWeather = async cityKey => fetchData(getWeatherURL(cityKey))
+const getCityWeather = cityKey => fetchData(getWeatherURL(cityKey))
 
