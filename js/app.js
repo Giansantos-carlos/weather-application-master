@@ -17,7 +17,7 @@ const showCityWeatherInfo = async cityName => {
     const [{ WeatherText, Temperature, IsDayTime, WeatherIcon }] =  await getCityWeather(Key)
     const timeIcon = `<img src="./src/icons/${WeatherIcon}.svg" />`
 
-    timeImg.src = IsDayTime ?  './src/day.svg' : timeImg.src = './src/night.svg'
+    timeImg.src = IsDayTime ?  './src/day.svg' : './src/night.svg'
     timeIconContanier.innerHTML = timeIcon
     cityNameContanier.textContent = LocalizedName
     cityWeatherContanier.textContent = WeatherText
